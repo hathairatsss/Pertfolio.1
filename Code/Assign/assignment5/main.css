@@ -1,0 +1,202 @@
+/* main.css - Blogger assignment styling (cute meadow theme with flowers) */
+
+/* --- Theme colors --- */
+:root {
+  --bg-sky: linear-gradient(to top, #d9f8ff, #ffffff);
+  --grass: #c3e88d;
+  --sun-yellow: #ffe16a;
+  --flower-pink: #ff9ecf;
+  --flower-red: #ff5a5f;
+  --text-dark: #2b2b2b;
+  --white: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  font-family: "Comic Sans MS", "Segoe UI", Arial, sans-serif;
+}
+
+/* --- Base --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg-sky);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* --- Container --- */
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: var(--grass);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 4px solid var(--sun-yellow);
+  position: relative;
+}
+
+/* --- Decorative flowers for container --- */
+.container::before,
+.container::after {
+  content: "✿";
+  font-size: 26px;
+  position: absolute;
+  color: var(--flower-pink);
+}
+.container::before {
+  top: -18px;
+  left: 18px;
+}
+.container::after {
+  bottom: -18px;
+  right: 18px;
+  color: var(--flower-red);
+}
+
+/* --- Header --- */
+#top {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--flower-red);
+  text-align: center;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px var(--white);
+}
+
+/* --- Divider --- */
+hr {
+  border: 0;
+  height: 3px;
+  background: var(--sun-yellow);
+  margin: 12px 0;
+  border-radius: 2px;
+}
+
+/* --- Textarea --- */
+#message {
+  width: 100%;
+  min-height: 90px;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 2px solid var(--flower-pink);
+  background: #fff;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Controls (buttons row) --- */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* --- Buttons --- */
+button {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .1s ease;
+}
+button.btn-post {
+  background: var(--flower-pink);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+button.btn-clear {
+  background: var(--flower-red);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+button:hover { transform: translateY(-2px); }
+button:active { transform: translateY(1px); }
+
+/* --- Result Area --- */
+.result-area {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- Topic box --- */
+#topic {
+  position: relative;
+  font-weight: bold;
+  border: 2px dashed var(--flower-red);
+  border-radius: var(--radius);
+  background: #fff8f8;
+  text-align: center;
+  min-height: 50px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  white-space: pre-line; /* รองรับการขึ้นบรรทัดใหม่ */
+}
+
+/* Flowers for topic */
+#topic::before, #topic::after {
+  content: "✿";
+  position: absolute;
+  font-size: 20px;
+  color: var(--flower-pink);
+}
+#topic::before {
+  top: -12px;
+  left: -12px;
+}
+#topic::after {
+  bottom: -12px;
+  right: -12px;
+  color: var(--flower-red);
+}
+
+/* --- Reply row --- */
+.reply-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* --- Reply boxes --- */
+#reply1, #reply2 {
+  position: relative;
+  flex: 1;
+  min-height: 50px;
+  text-align: center;
+  background: #fffefa;
+  color: #444;
+  border: 2px dashed var(--flower-pink);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+  white-space: pre-line; /* รองรับการขึ้นบรรทัดใหม่ */
+}
+
+/* Flowers for replies */
+#reply1::before, #reply2::before,
+#reply1::after, #reply2::after {
+  content: "✿";
+  position: absolute;
+  font-size: 18px;
+  color: var(--flower-pink);
+}
+#reply1::before, #reply2::before {
+  top: -10px;
+  left: -10px;
+}
+#reply1::after, #reply2::after {
+  bottom: -10px;
+  right: -10px;
+  color: var(--flower-red);
+}

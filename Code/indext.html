@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio_htr</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="snow.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <section>
+    <h1>Hathairat Srichaiwong</h1>
+  </section>
+
+  <img src="pic/myphoto.jpg" alt="myphoto" class="profile-photo">
+
+  <div class="parallax"></div>
+
+  <section>
+    <h6>EDUCATION</h6>
+      <ul>
+        <li>Primary School: Anubansomdetphawannarat School</li>
+        <li>Secondary School: Samchukratanaphokaram School</li>
+        <li>Bachelor Degree: King Mongkut’s University Of Technology Thonburi</li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>งานอดิเรก</h2>
+    <ul>
+      <li>อ่านหนังสือ</li>
+      <li>เลี้ยงแมว</li>
+      <li>ทำอาหาร</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>ทักษะ ความสามารถ</h3>
+    <ul>
+      <li>พูดเก่ง</li>
+      <li>วางแผนงานได้ดี</li>
+      <li>ขายของเก่งมาก</li>
+      <li>แก้ปัญหาหน้างานได้ดี</li>
+      <li>กำลังพัฒนาการเขียนโค้ด</li>
+      <li>วาดรูปเก่ง</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>SKILL</h4>
+    <div>
+      <img src="pic/Animate.png" alt="Animate" class="skill">
+      <img src="pic/maya.jpg" alt="Maya" class="skill">
+      <img src="pic/SPSS-blog.png" alt="SPSS" class="skill">
+      <img src="pic/Procreate.jpg" alt="Procreate" class="skill">
+      <img src="pic/Unity logo.jpg" alt="Unity" class="skill">
+      <img src="pic/line sticker.jpg" alt="line" class="skill">
+    </div>
+  </section>
+
+  <section>
+    <h5>ข้อมูลการติดต่อ</h5>
+    <p><a href="https://www.facebook.com/share/19SmYrjUXv/?mibextid=wwXIfr" target="_blank">Facebook</a></p>
+    <p><a href="https://www.instagram.com/dobbycuppycake_?igsh=MXVjMTQzZjlnYnlzdw==" target="_blank">Instagram</a></p>
+  </section>
+
+  <section>
+    <h7>ASSIGNMENT</h7>
+      <ul class="Assign">
+        <li><a href="Assign/assignment_3/recipe.html">Assignment 3</a></li>
+        <li><a href="Assign/assignment4/pizza.html">Assignment 4</a></li>
+        <li><a href="Assign/assignment5/main.html">Assignment 5</a></li>
+        <li><a href="Assign/assignment6/register.html">Assignment 6</a></li>
+        <li><a href="Assign/assignment7/index.html">Assignment 7</a></li>
+        <li><a href="Assign/assignment8/indext.html">Assignment 8</a></li>
+        </ul>
+  </section>
+
+  <section>
+    <h8></h8>
+      <ul class="Project">
+        <li><a  href="project.html"> Project</a></li>
+      </ul>
+  </section>
+
+  <section> 
+    <h9>Bibliography</h9>
+    <p><a href="https://gsap.com/scroll/" target="_blank">GSAP scroll</a></p>
+    <p><a href="https://locomotivemtl.github.io/locomotive-scroll/" target="_blank">ScrollMagic</a></p>
+    <p><a href="https://scrollmagic.io/" target="_blank">Locomotive Scroll</a></p>
+  </section>
+
+  <script>
+window.onscroll = function() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("progress-bar").style.width = scrolled + "%";
+};
+</script>
+
+  <script>
+    const elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, h7, h8, h9 img.skill");
+
+    function checkScroll() {
+      let triggerBottom = window.innerHeight * 0.8;
+      elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          el.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // run ตอนโหลดครั้งแรก
+  </script>
+
+</body>
+</html>
+

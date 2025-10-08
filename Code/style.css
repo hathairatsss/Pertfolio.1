@@ -1,0 +1,165 @@
+
+/* ===== Body ===== */
+body {
+  margin: 0;
+  font-family: Garamond, 'Times New Roman', Times, serif;
+  font-size: 18pt;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #7fb1f8, #ffbce6);
+  min-height: 100vh;
+  background-position: 100%;
+  color: rgb(96, 61, 45);
+  text-align: center;
+  overflow-x: hidden;
+
+}
+
+
+
+#progress-bar{
+  position:fixed;
+  top:0;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  background: linear-gradient(90deg, #651eff, #1c55b1, #5893ff, #19bc6a, #fbff85, #ff9b58, #ff5858, #ff58a0);
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+}
+
+/* ===== Section ===== */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  position: relative;
+}
+
+/* ===== Heading ===== */
+h1, h2, h3, h4, h5, h6, h7{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(90, 142, 255);
+  font-weight: bold;
+  font-style: italic;
+  font-family: Garamond, 'Times New Roman', Times, serif;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+h1 {
+  text-shadow: -1px 4px rgb(98, 174, 255);
+}
+
+/* ===== Animation Show Effect ===== */
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ===== Image Styles ===== */
+img {
+  width:300px;
+ 
+  border-radius: 100px;
+  vertical-align: middle;
+}
+section {
+  position: relative;
+  z-index: 1;
+}
+img.skill {
+  width: 200px;
+  margin: 20px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1s ease-out;
+}
+img.skill.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== Horizontal Line ===== */
+hr {
+  height: 30px;
+  color: aliceblue;
+  background-color: aliceblue;
+  border: none;
+}
+
+/* ===== Links ===== */
+a:link {
+  color: #18700a;
+}
+a:visited {
+  color: #3f56ff;
+}
+a:hover {
+  color: #fc7474;
+}
+
+/* ===== List Styles ===== */
+ul.P1,
+ul.P2,
+ul.P3,
+ul.P4 {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.Assign,
+.Project {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+  align-items:center; /* ให้ปุ่มอยู่ชิดซ้าย ถ้าอยากให้อยู่กลางใช้ center */
+}
+section {
+  text-align: center;
+}
+
+.Assign a , .Project a {
+  display: inline-block;
+  background-color: #327ad2; /* สีพื้นปุ่ม */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px; /* ทำให้ขอบมน */
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.Assign a:hover, .Project a:hover {
+  background-color: #0b259b; /* สีตอนเอาเมาส์วาง */
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  z-index: 9999;
+  color: #fff;
+  font-size: 1em;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}

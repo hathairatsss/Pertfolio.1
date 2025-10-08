@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* --- Navbar --- */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1625941366485-0cbe9d1bb40e");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* --- Content Section --- */
+.container {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #333;
+}
+
+.ingredients, .instructions {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* --- Image Style --- */
+img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  border: 5px dotted lightblue;
+  border-radius: 100px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}

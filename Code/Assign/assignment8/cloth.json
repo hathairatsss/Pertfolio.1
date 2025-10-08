@@ -1,0 +1,38 @@
+{
+	"top1":{
+		"brand": "ViVid Winter",
+		"price":"200",
+		"img":"top1.jpg"},
+	"top2":{
+		"brand": "Vintage Village",
+		"price":"500",
+		"img":"top2.jpg"},
+	"top3":{
+		"brand": "Abiko Clothing",
+		"price":"349",
+		"img":"top3.jpg"},
+	"top4":{
+		"brand": "Abiko Clothing",
+		"price":"349",
+		"img":"top4.jpg"},
+	"top5":{
+		"brand": "FabricFlair",
+		"price":"599",
+		"img":"top5.jpg"},
+	"top6":{
+		"brand": "Vogue Chic",
+		"price":"279",
+		"img":"top6.jpg"},
+	"top7":{
+		"brand": "Glmour Empire",
+		"price":"829",
+		"img":"top7.jpg"},
+	"top8":{
+		"brand": "Elite Modern",
+		"price":"459",
+		"img":"top8.jpg"},
+	"top9":{
+		"brand": "Rosy Darling",
+		"price":"499",
+		"img":"top9.jpg"}
+}
